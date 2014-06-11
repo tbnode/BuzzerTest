@@ -3,3 +3,13 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  
+  //- BTW, this is a jade comment that will not show up in the markup
+  // This comment shows up in your markup
+  //- Here, we already have models/User.js configured
+  //- routes/index.js has been updated, see the comments there for details
+  //- This is the form we need for the changes we've made to work
+  form(method='post', action='/register')
+    input(name='name', type='text', placeholder='Name')
+    input(name='email', type='email', placeholder='Email')
+    input(type='submit', value='Register')
